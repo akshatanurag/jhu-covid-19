@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Star Admin Premium Bootstrap Admin Dashboard Template</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../assets/vendors/iconfonts/ionicons/css/ionicons.css">
+    <link rel="stylesheet" href="../assets/vendors/iconfonts/typicons/src/font/typicons.css">
+    <link rel="stylesheet" href="../assets/vendors/iconfonts/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../assets/vendors/css/vendor.bundle.addons.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../assets/css/shared/style.css">
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../assets/css/demo_1/style.css">
+    <!-- End Layout styles -->
+    <link rel="shortcut icon" href="../../assets/images/favicon.png" />
+  </head>
+  <body>
+    <div class="container-scroller">
+      <%- include('./partials/_navbar'); -%>
+      <div class="container-fluid page-body-wrapper">
+      <%- include('./partials/_sidebar'); -%>
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-lg-4 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4>Name : <%- pateintDetails.name -%></h4>
+                    <h4>Age : <%- pateintDetails.age -%></h4>
+                    <h4>Gender : <%- pateintDetails.gender -%></h4>
+                    <h4>Email ID : <%- pateintDetails.email -%></h4>
+                    <h4>Mobile No. : <%- pateintDetails.mobile_no -%></h4>
+                    <script>
+                      let data = [<%- pateintDetails.points -%>]
+                    </script>
+                    <br><br>
+                    <h4>Result:</h4><h1 > <center style="color: red;">COVID-19 +ve</center> </h1>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-lg-8 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                    <!-- <h4 class="card-title mb-0">Sales Statistics Overview</h4> -->
+                    <div class="d-flex flex-column flex-lg-row">
+                      <!-- <p>Lorem ipsum is placeholder text commonly used</p> -->
+                      <!-- <ul class="nav nav-tabs sales-mini-tabs ml-lg-auto mb-4 mb-md-0" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="sales-statistics_switch_1" data-toggle="tab" role="tab" aria-selected="true">1D</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="sales-statistics_switch_2" data-toggle="tab" role="tab" aria-selected="false">5D</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="sales-statistics_switch_3" data-toggle="tab" role="tab" aria-selected="false">1M</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="sales-statistics_switch_4" data-toggle="tab" role="tab" aria-selected="false">1Y</a>
+                        </li>
+                      </ul> -->
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row">
+                      <div class="data-wrapper d-flex mt-2 mt-lg-0">
+                        <!-- <div class="wrapper pr-5">
+                          <h5 class="mb-0">Total Cost</h5>
+                          <div class="d-flex align-items-center">
+                            <h4 class="font-weight-semibold mb-0">15,263</h4>
+                            <small class="ml-2 text-gray d-none d-lg-block"><b>100%</b> of 20,000 Total</small>
+                          </div>
+                        </div> -->
+                        <div class="wrapper">
+                          <!-- <h5 class="mb-0">Total Revenue</h5> -->
+                          <div class="d-flex align-items-center">
+                            <!-- <h4 class="font-weight-semibold mb-0">$753,098</h4>
+                            <small class="ml-2 text-gray d-none d-lg-block"><b>10.5%</b> of 20,000 Total</small> -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ml-lg-auto" id="sales-statistics-legend"><div class="chartjs-legend"><ul><li><span style="background-color: #8862e0"></span>Revenue</li><li><span style="background-color: #19d895"></span>Sales</li></ul></div></div>
+                    </div>
+                    <canvas class="mt-5 chartjs-render-monitor" height="201" id="sales-statistics-overview" style="display: block; width: 503px; height: 201px;" width="503"></canvas>
+                  </div>
+                </div>
+              </div>
+
+
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+      <%- include('./partials/_footer'); -%>
+        <!-- partial -->
+      </div>
+
+
+
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="../assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="../assets/vendors/js/vendor.bundle.addons.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="../assets/js/shared/off-canvas.js"></script>
+    <script src="../assets/js/shared/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="../../../assets/js/shared/chart.js"></script>
+    <!-- <script src="../assets/js/demo_1/dashboard.js"></script> -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script>
+      if ($('#sales-statistics-overview').length) {
+      var salesChartCanvas = $("#sales-statistics-overview").get(0).getContext("2d");
+      var gradientStrokeFill_1 = salesChartCanvas.createLinearGradient(0, 0, 0, 450);
+      gradientStrokeFill_1.addColorStop(1, 'rgba(255,255,255, 0.0)');
+      gradientStrokeFill_1.addColorStop(0, 'rgba(102,78,235, 0.2)');
+      var gradientStrokeFill_2 = salesChartCanvas.createLinearGradient(0, 0, 0, 400);
+      gradientStrokeFill_2.addColorStop(1, 'rgba(255, 255, 255, 0.01)');
+      gradientStrokeFill_2.addColorStop(0, '#14c671');
+      var data_1_1 = data;
+      var data_1_2 = [0, 25, 20, 40, 70, 52, 49, 90, 70, 94, 110, 135];
+
+      var data_2_1 = [130, 145, 155, 60, 75, 65, 130, 110, 145, 149, 170];
+      var data_2_2 = [0, 70, 52, 90, 25, 20, 40, 70, 49, 94, 110, 135];
+
+      var data_3_1 = [130, 75, 65, 130, 110, 145, 155, 60, 145, 149, 170];
+      var data_3_2 = [0, 70, 52, 94, 110, 135, 90, 25, 20, 40, 70, 49];
+
+      var data_4_1 = [130, 145, 65, 130, 75, 145, 149, 170, 110, 155, 60];
+      var data_4_2 = [0, 70, 90, 25, 40, 20, 94, 110, 135, 70, 49, 52];
+      var areaData = {
+        labels: ["Jan 1", "Jan 7", "Jan 14", "Jan 21", "Jan 28", "Feb 4", "Feb 11", "Feb 18"],
+        datasets: [{
+          label: 'COVID-19',
+          data: data_1_1,
+          borderColor: successColor,
+          backgroundColor: gradientStrokeFill_2,
+          borderWidth: 2
+        }]
+      };
+      var areaOptions = {
+        responsive: true,
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        },
+        elements: {
+          point: {
+            radius: 3,
+            backgroundColor: "#fff"
+          },
+          line: {
+            tension: 0
+          }
+        },
+        layout: {
+          padding: {
+            left: 0,
+            right: 0,
+            top: 0,
+            bottom: 0
+          }
+        },
+        legend: false,
+        legendCallback: function (chart) {
+          var text = [];
+          text.push('<div class="chartjs-legend"><ul>');
+          for (var i = 0; i < chart.data.datasets.length; i++) {
+            console.log(chart.data.datasets[i]); // see what's inside the obj.
+            text.push('<li>');
+            text.push('<span style="background-color:' + chart.data.datasets[i].borderColor + '">' + '</span>');
+            text.push(chart.data.datasets[i].label);
+            text.push('</li>');
+          }
+          text.push('</ul></div>');
+          return text.join("");
+        },
+        scales: {
+          xAxes: [{
+            display: false,
+            ticks: {
+              display: false,
+              beginAtZero: false
+            },
+            gridLines: {
+              drawBorder: false
+            }
+          }],
+          yAxes: [{
+            ticks: {
+              max: 200,
+              min: 0,
+              stepSize: 50,
+              fontColor: "#858585",
+              beginAtZero: false
+            },
+            gridLines: {
+              color: '#e2e6ec',
+              display: true,
+              drawBorder: false
+            }
+          }]
+        }
+      }
+      var salesChart = new Chart(salesChartCanvas, {
+        type: 'line',
+        data: areaData,
+        options: areaOptions
+      });
+      document.getElementById('sales-statistics-legend').innerHTML = salesChart.generateLegend();
+
+      $("#sales-statistics_switch_1").click(function () {
+        var data = salesChart.data;
+        data.datasets[0].data = data_1_1;
+        data.datasets[1].data = data_1_2;
+        salesChart.update();
+      });
+      $("#sales-statistics_switch_2").click(function () {
+        var data = salesChart.data;
+        data.datasets[0].data = data_2_1;
+        data.datasets[1].data = data_2_2;
+        salesChart.update();
+      });
+      $("#sales-statistics_switch_3").click(function () {
+        var data = salesChart.data;
+        data.datasets[0].data = data_3_1;
+        data.datasets[1].data = data_3_2;
+        salesChart.update();
+      });
+      $("#sales-statistics_switch_4").click(function () {
+        var data = salesChart.data;
+        data.datasets[0].data = data_4_1;
+        data.datasets[1].data = data_4_2;
+        salesChart.update();
+      });
+    }
+    </script>
+
+    <!-- End custom js for this page-->
+  </body>
+</html>

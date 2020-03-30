@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Star Admin Premium Bootstrap Admin Dashboard Template</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../assets/vendors/iconfonts/ionicons/css/ionicons.css">
+    <link rel="stylesheet" href="../assets/vendors/iconfonts/typicons/src/font/typicons.css">
+    <link rel="stylesheet" href="../assets/vendors/iconfonts/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../assets/vendors/css/vendor.bundle.addons.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../assets/css/shared/style.css">
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../assets/css/demo_1/style.css">
+    <!-- End Layout styles -->
+    <link rel="shortcut icon" href="../assets/images/favicon.png" />
+  </head>
+  <body>
+    <div class="container-scroller">
+      <%- include('./partials/_navbar'); -%>
+      <div class="container-fluid page-body-wrapper">
+      <%- include('./partials/_sidebar'); -%>
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Striped Table</h4>
+                    <p class="card-description"> Add class <code>.table-striped</code> </p>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th> User </th>
+                          <th> First name </th>
+                          <th> Progress </th>
+                          <th> Age </th>
+                          <th> Gender </th>
+                          <th>View Results</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% patientArray.forEach(function(m){ %>
+                        <tr>
+                          <td class="py-1">
+                            <img src="../../../assets/images/faces-clipart/pic-1.png" alt="image" /> </td>
+                          <td> <%- m.name -%> </td>
+                          <td>
+                            <div class="progress">
+                              <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </td>
+                          <td> <%- m.age -%> </td>
+                          <td> <%- m.gender -%></td>
+                          <td> <a href="/result/<%-m._id -%>" class="btn btn-primary btn-fw">View</a></td>
+
+
+                        </tr>
+                        <% }); %>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+
+
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+      <%- include('./partials/_footer'); -%>
+        <!-- partial -->
+      </div>
+
+
+
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="../assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="../assets/vendors/js/vendor.bundle.addons.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="../assets/js/shared/off-canvas.js"></script>
+    <script src="../assets/js/shared/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <!-- <script src="../assets/js/demo_1/dashboard.js"></script> -->
+    <!-- End custom js for this page-->
+  </body>
+</html>

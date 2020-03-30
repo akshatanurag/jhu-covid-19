@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Star Admin Premium Bootstrap Admin Dashboard Template</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../assets/vendors/iconfonts/ionicons/css/ionicons.css">
+    <link rel="stylesheet" href="../assets/vendors/iconfonts/typicons/src/font/typicons.css">
+    <link rel="stylesheet" href="../assets/vendors/iconfonts/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../assets/vendors/css/vendor.bundle.addons.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../assets/css/shared/style.css">
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../assets/css/demo_1/style.css">
+    <!-- End Layout styles -->
+    <link rel="shortcut icon" href="../assets/images/favicon.png" />
+    <style> 
+      #loader { 
+          border: 12px solid #f3f3f3; 
+          border-radius: 50%; 
+          border-top: 12px solid #444444; 
+          width: 70px; 
+          height: 70px; 
+          animation: spin 1s linear infinite; 
+      } 
+        
+      @keyframes spin { 
+          100% { 
+              transform: rotate(360deg); 
+          } 
+      } 
+        
+      .center { 
+          position: absolute; 
+          top: 0; 
+          bottom: 0; 
+          left: 0; 
+          right: 0; 
+          margin: auto; 
+      } 
+  </style> 
+  </head>
+  <body>
+    <div id="loader" class="center"></div> 
+    <div class="container-scroller">
+      <%- include('./partials/_navbar'); -%>
+      <div class="container-fluid page-body-wrapper">
+      <%- include('./partials/_sidebar'); -%>
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+              <div class="col-md-2"></div>
+            <div class="col-md-8 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Basic form</h4>
+                    <p class="card-description"> Basic form elements </p>
+                    <form class="forms-sample" method="POST" action="/add-new" encType="multipart/form-data" id="data">  
+                      <div class="form-group">
+                        <label for="exampleInputName1">Name * </label>
+                        <input type="text" name="name" class="form-control" id="exampleInputName1" placeholder="Name" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Email address</label>
+                        <input type="email" class="form-control" name="email" id="exampleInputEmail3" placeholder="Email">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword4">Mobile Number</label>
+                        <input type="number" class="form-control" name="mobile_no" id="exampleInputPassword4" placeholder="1234567890">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword4">Gender *</label><br>
+                        <div class="row">
+                          <div class="col-md-4"> 
+                        Male : <input type="radio"  name="gender" value="M">   
+                          </div>
+                          <div class="col-md-4">
+                            Female : <input type="radio"  name="gender" value="F">
+                          </div>
+                          <div class="col-md-4">
+                        Others : <input type="radio"  name="gender" value="O">
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputCity1">Age</label>
+                        <input type="number" class="form-control" id="" name="age" placeholder="Age">
+                      </div>
+                      <div class="form-group">
+                        <label>File upload</label>
+                        <!-- <input type="file" name="xray" class="file-upload-default"> -->
+                        <div class="input-group col-xs-12">
+                          <!-- <input type="text" class="form-control file-upload-info" disabled="" placeholder="Upload Image"> -->
+                        <input type="file" name="xray">
+
+                          <!-- <span class="input-group-append">
+                            <button class="file-upload-browse btn btn-info" type="button">Upload</button>
+                          </span> -->
+                        </div>
+                      </div>
+                      <!-- <div class="form-group">
+                        <label for="exampleTextarea1">Textarea</label>
+                        <textarea class="form-control" id="exampleTextarea1" rows="2"></textarea>
+                      </div> -->
+                      <button type="submit" class="btn btn-success mr-2" id="submit">Submit</button>
+                      <button class="btn btn-light">Cancel</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2"></div>
+
+
+
+
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+      <%- include('./partials/_footer'); -%>
+        <!-- partial -->
+      </div>
+
+
+
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="../assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="../assets/vendors/js/vendor.bundle.addons.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="../assets/js/shared/off-canvas.js"></script>
+    <script src="../assets/js/shared/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <!-- <script src="../assets/js/demo_1/dashboard.js"></script> -->
+    <!-- End custom js for this page-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+ 
+<!-- Include a polyfill for ES6 Promises (optional) for IE11 -->
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill9/dist/polyfill.js"></script>
+<script>
+  if (<%= alert %>) {
+          var alertTitle = "<%= alertTitle %>"
+          var alertMessage = "<%= alertMessage %>"
+          Swal.fire(alertTitle, alertMessage, "error");
+  } else{
+    var alertTitle = "<%= alertTitle %>"
+          var alertMessage = "<%= alertMessage %>"
+          Swal.fire(alertTitle, alertMessage, "success");
+  }
+
+</script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script> 
+    document.onreadystatechange = function() { 
+        if (document.readyState !== "complete") { 
+            document.querySelector( "body").style.visibility = "hidden"; 
+            document.querySelector( "#loader").style.visibility = "visible"; 
+        } else { 
+            document.querySelector( 
+              "#loader").style.display = "none"; 
+            document.querySelector( 
+              "body").style.visibility = "visible"; 
+        } 
+    }; 
+</script> 
+
+  <!-- <script>
+    $("#data").submit((function(e) {
+        // $(".alert-box").show(), 
+        e.preventDefault();
+        var form = $(this),
+            url = form.attr("action");
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: new FormData(this),
+            processData: false,
+            contentType: false,
+            // beforeSend: function () {
+            //    $(".modal").show();
+            // },
+            // complete: function () {
+            //     $(".modal").hide();
+            // },
+            success: function(data) {
+              Swal.fire("success")
+            },
+            error: function(data) {
+                console.log(data)
+            }
+        })
+    }));
+  </script> -->
+
+  </body>
+</html>

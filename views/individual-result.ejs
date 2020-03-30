@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Star Admin Premium Bootstrap Admin Dashboard Template</title>
+    <title>MEDI-CO | Result</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../assets/vendors/iconfonts/ionicons/css/ionicons.css">
@@ -43,7 +43,7 @@
                       let data = [<%- pateintDetails.points -%>]
                     </script>
                     <br><br>
-                    <h4>Result:</h4>
+                    <h4>Prediction: <%- prediction -%></h4>
                     <!-- <h1 > <center style="color: red;">COVID-19 +ve</center> </h1> -->
                   </div>
 
@@ -137,8 +137,12 @@
       var gradientStrokeFill_2 = salesChartCanvas.createLinearGradient(0, 0, 0, 400);
       gradientStrokeFill_2.addColorStop(1, 'rgba(255, 255, 255, 0.01)');
       gradientStrokeFill_2.addColorStop(0, '#14c671');
+
+      var gradientStrokeFill_3 = salesChartCanvas.createLinearGradient(0, 0, 0, 400);
+      gradientStrokeFill_3.addColorStop(1, 'rgba(255, 255, 255, 0.01)');
+      gradientStrokeFill_3.addColorStop(0, '#ff6258');
       var data_1_1 = data;
-      var data_1_2 = [0, 25, 20, 40, 70, 52, 49, 90, 70, 94, 110, 135];
+      var data_1_2 = [30, 25, 20, 40, 70, 52, 129, 100, 70, 94, 110, 135];
 
       var data_2_1 = [130, 145, 155, 60, 75, 65, 130, 110, 145, 149, 170];
       var data_2_2 = [0, 70, 52, 90, 25, 20, 40, 70, 49, 94, 110, 135];
@@ -149,12 +153,26 @@
       var data_4_1 = [130, 145, 65, 130, 75, 145, 149, 170, 110, 155, 60];
       var data_4_2 = [0, 70, 90, 25, 40, 20, 94, 110, 135, 70, 49, 52];
       var areaData = {
-        labels: ["Jan 1", "Jan 7", "Jan 14", "Jan 21", "Jan 28", "Feb 4", "Feb 11", "Feb 18"],
+        labels: ["Day 1", "Day 7", "Day 14", "Day 21", "Day 28", "Day 30", "Day 37", "Day 40", "Day 47", "Day 50", "Day 60"],
         datasets: [{
-          label: 'COVID-19',
+          label: 'FEVER',
           data: data_1_1,
           borderColor: successColor,
           backgroundColor: gradientStrokeFill_2,
+          borderWidth: 2
+        },
+        {
+          label: 'Blood Pressure',
+          data: data_1_2,
+          borderColor: dangerColor,
+          backgroundColor: gradientStrokeFill_3,
+          borderWidth: 2
+        },
+        {
+          label: 'Blood Pressure',
+          data: data_2_2,
+          borderColor: infoColor,
+          backgroundColor: gradientStrokeFill_1,
           borderWidth: 2
         }]
       };

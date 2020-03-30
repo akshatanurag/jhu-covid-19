@@ -20,7 +20,7 @@ router.post("/add-new",middleware.isLoggedIn,async (req,res)=>{
  
       if(sampleFile.mimetype === "image/jpeg" || sampleFile.mimetype === "image/png"){
           [name,ext]= await sampleFile.mimetype.split("/")
-      sampleFile.mv(`./uploads/${pid}.${ext}`, async function(err) {
+      sampleFile.mv(`./flask_server/uploads/${pid}.${ext}`, async function(err) {
         if (err){
         console.log(err)
         return res.render('add-new', {alert: true, alertTitle: "Error", alertMessage: `No files were uploaded.`,m: req.currentUser})
@@ -39,7 +39,7 @@ router.post("/add-new",middleware.isLoggedIn,async (req,res)=>{
         })
         Patient.pid = pid
         var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
-        Patient.imageAddr = `${fullUrl}/uploads/${pid}.${ext}`
+        Patient.imageAddr = `./uploads/${pid}.${ext}`
         Patient.user_id = req.currentUser._id
         Patient.points.push(130, 75, 65, 130, 110, 145, 155, 60, 145, 149, 170)
         await Patient.save();

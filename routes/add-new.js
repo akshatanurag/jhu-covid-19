@@ -7,7 +7,7 @@ const middleware = require('../middlewares/middleware')
 const router = express.Router()
 
 router.get("/add-new",middleware.isLoggedIn,(req,res)=>{
-    res.render("add-new",{alert: "", alertTitle: "error", alertMessage: `sddsc`})
+    res.render("add-new",{alert: "", alertTitle: "error", alertMessage: `sddsc`,m: req.currentUser})
 })
 router.post("/add-new",middleware.isLoggedIn,async (req,res)=>{
     try {

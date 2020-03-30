@@ -8,7 +8,7 @@ const router = express.Router()
 
 router.get("/result/:id",middleware.isLoggedIn,async (req,res)=>{
     let pateintDetails = await patient.findById(req.params.id)
-    res.render("individual-result",{pateintDetails})
+    res.render("individual-result",{pateintDetails,m: req.currentUser})
 })
 
 module.exports = router

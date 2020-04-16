@@ -1,0 +1,2 @@
+# Medico
+We propose a dashboard system for doctors working in remote/assembled clinics where theycan access status & detailed health related information of different patients instantly and follow up with them (especially remote patients who are under quarantine at home) & a Covid19 X-Ray Screening application which will can assist doctors in diagnosis. Also a dedicated self-diagnosing section where people can know if there's a need to go to the hospital or not.
